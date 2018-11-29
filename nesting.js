@@ -51,12 +51,12 @@ var employees = [
 */
 
 function employeeUpdater() {
-  for (i=0; i < employees.length; i++) {
+  for (let i = employees.length - 1; i >= 0; i--) {
     if (employees[i].firstName === "Theo") {
       employees.splice(i, 1)
     } else if (employees[i].firstName === "Lorie") {
       employees[i].department = "HR"
-    } 
+    }
   }
   return employees
 }
@@ -78,9 +78,9 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 function removeDuplicates(arr) {
-  for (let i=arr.length; i >= 0; i--) {
-    for (let j=arr.length; j >= 0; j--) {
-      if ( arr[i] === arr[j] && i !== j) {
+  for (let i = arr.length; i >= 0; i--) {
+    for (let j = arr.length; j >= 0; j--) {
+      if (arr[i] === arr[j] && i !== j) {
         arr.splice(i, 1)
       }
     }
@@ -99,7 +99,7 @@ var cat = {
     {
       name: 'Grumpy',
       activities: ['be grumpy', 'eat food']
-    }, 
+    },
     {
       name: 'Lazy Bones',
       activities: ['sleep', 'pre-sleep naps']
@@ -167,7 +167,7 @@ let recordCleaner = () => {
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 // Do not edit the code above.
 
 /*
@@ -180,9 +180,9 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 function looper() {
-  for (let i=0; i<numsArr.length; i++) {
-    for (let j=0; j<numsArr[i].length; j++) {
-      if (numsArr[i][j] %2 === 0) {
+  for (let i = 0; i < numsArr.length; i++) {
+    for (let j = 0; j < numsArr[i].length; j++) {
+      if (numsArr[i][j] % 2 === 0) {
         numsArr[i].splice(j, 1, "even")
       } else {
         numsArr[i].splice(j, 1, "odd")
