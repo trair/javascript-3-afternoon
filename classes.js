@@ -139,7 +139,7 @@ class ProgressiveManager {
       this.title = "Bestest Manager"
     }
   }
-}
+} 
 
 
 
@@ -180,14 +180,14 @@ class Machine {
     this.needs_reboot = true
   }
   // reboot() {
-  //   let that = this
+  //   let that = this                         //We need to redefine 'this' because when you declare a function an object called 'this' is created, so when we try to reference it inside the anonymous function below, we are trying to reference an empty object
   //   return function() {
   //     that.wear_and_tear_count -= 10
   //     that.needs_reboot = false
   //   }
   // }
   reboot() {
-    return () => {
+    return () => {                            //We can reference the 'this' object created by the class because an arrow function does not create its own instance of a 'this' object
       this.wear_and_tear_count -= 10
       this.needs_reboot = false
     }
